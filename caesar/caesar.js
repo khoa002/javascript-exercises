@@ -1,9 +1,11 @@
 const caesar = function (string, displaceBy) {
+    let result = '';
+
     // manual way
+    // large wrap not working
     const uppercase = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
     const lowercase = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
 
-    let result = '';
     for (let i = 0; i < string.length; i++) {
         if (uppercase.indexOf(string.charAt(i)) < 0
             && lowercase.indexOf(string.charAt(i)) < 0) {
@@ -40,6 +42,7 @@ const caesar = function (string, displaceBy) {
 
         }
     }
+    
     return result;
 }
 
